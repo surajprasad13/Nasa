@@ -1,5 +1,94 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Source Code Pro',
+        monospace;
+    color: white;
+
+}
+
+body {
+    background-color: #0d0d0d;
+}
+
+header {
+    background-color: black;
+    text-align: center;
+    overflow: hidden;
+    color: white;
+    margin: auto;
+}
+
+img {
+    float: left;
+
+}
+
+img:hover {
+    transform: scale(.9);
+}
+
+h2 {
+    justify-content: center;
+    margin: auto;
+    padding: 25px;
+}
+
+.container1 {
+    width: 100%;
+    background-color: ;
+    text-align: center;
+
+}
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(35, 18, 182, 0);
+    transition: 0.3s;
+    width: 98%;
+    margin: auto;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+    padding: 2px 16px;
+}
+
+.container h3 {
+    color: indigo;
+    font-size: 2em;
+}
+
+.container h4 {
+    float: left;
+}
+
+.container2 {
+    margin-top: 20px;
+    background-color: white;
+    width: 100%;
+    padding: 20px ;
+    border: 5px solid red;
+}
+
+input {
+    height: 50px;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    margin: auto;
+    display: block;
+    color: black    ;
 }
