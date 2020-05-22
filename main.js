@@ -7,7 +7,7 @@ const container = document.querySelector(".container1");
 function setDiv(path) {
   const div = document.createElement("div");
   div.setAttribute("class", "card");
-  const template = `<h3>Picture Of the Day</h3><img id="img" src=${path.url} alt="Avatar" style="width:100%" height="450px" >
+  const template = `<h3>Picture Of the Day</h3><img id="img" src=${path.hdurl} alt="Avatar" style="width:100%" height="450px" >
             <div class="container">
                 <h3>${path.title}</h3>
                 <p>${path.explanation}</p><h4>Date:-${path.date}</h4>
