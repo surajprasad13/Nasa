@@ -24,11 +24,10 @@ header {
 
 img {
     float: left;
-
 }
 
 img:hover {
-    transform: scale(.9);
+    
 }
 
 h2 {
@@ -38,18 +37,16 @@ h2 {
 }
 
 .container1 {
-    width: 100%;
     background-color: ;
     text-align: center;
 
 }
-
+.container1>img{
+ height: 100%;
+ width: auto;
+}
 .card {
-    /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 rgba(35, 18, 182, 0);
     transition: 0.3s;
-    width: 98%;
-    margin: auto;
     border: 1px solid white;
     border-radius: 10px;
 }
@@ -77,9 +74,7 @@ h2 {
 
 .container2 {
     margin-top: 20px;
-    background-color: white;
     width: 100%;
-    padding: 20px ;
     border: 5px solid red;
 }
 
@@ -91,4 +86,16 @@ input {
     margin: auto;
     display: block;
     color: black    ;
+}
+ol{
+    background-color:whitesmoke;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+li {
+    list-style: none;
+    margin: 10px;
+    padding: 5px;
+    color: black;
+    border:2px solid blue;
 }

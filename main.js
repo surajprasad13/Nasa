@@ -17,34 +17,39 @@ function setDiv(path) {
   container.appendChild(div);
 }
 
-
 const form = document.getElementById("myForm");
 var inputElement = document.getElementById("search");
-
-
-
 
 window.addEventListener("load", (event) => {
   fetch(url + apiKey)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
-      var path = data;
-      setDiv(path);
+      setDiv(data);
     });
+});
 
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
-    var inputValue = inputElement.value;
-    console.log("form submitted");
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  var inputValue = inputElement.value;
 
-fetch(url2+ "/search?q="+inputValue)
-  .then((response) => response.json())
-  .then((data) => {
-    console.log(data);
-  });
+  const fetchUrl = async () => {
+    const res = await fetch(url2 + "/search?q=" + inputValue);
+    const data = await res.json();
+    const nasa = data.collection.items; //map((result,index)=>({...result,id:index+1}))
+    displaySearch(nasa);
+  };
+  fetchUrl();
+  const displaySearch = (path) => {
+    //const createDiv = document.createElement("ol");
+    //createDiv.setAttribute("class", "container3");
+    const append = document.getElementById("olList");
 
+    const html = path
+      .map((nasa) => `<li>${nasa.href}</li>`)
+      .join("");
+    append.innerHTML = html;
+    console.log(path);
+  };
 
-
-  });
+  const renderImage = async () => {};
 });
