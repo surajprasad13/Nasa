@@ -2,7 +2,7 @@ const apiKey = "T2eGrw8nvRSHQMlxs9aUeJfhhhbwu8AYzDKfcUDq";
 const url = "https://api.nasa.gov/planetary/apod?api_key="; //image of the day
 const url2 = "https://images-api.nasa.gov"; //search images and video /search?q={q}
 
-const container = document.querySelector(".container1");
+const container = document.querySelector(".container");
 
 function setDiv(path) {
   const div = document.createElement("div");
@@ -30,26 +30,24 @@ window.addEventListener("load", (event) => {
 
 form.addEventListener("submit", function (event) {
   event.preventDefault();
-  var inputValue = inputElement.value;
+  const inputValue = inputElement.value;
 
   const fetchUrl = async () => {
     const res = await fetch(url2 + "/search?q=" + inputValue);
     const data = await res.json();
-    const nasa = data.collection.items; //map((result,index)=>({...result,id:index+1}))
+    const nasa=data.collection.items;
+    console.log(data)
     displaySearch(nasa);
   };
   fetchUrl();
   const displaySearch = (path) => {
-    //const createDiv = document.createElement("ol");
-    //createDiv.setAttribute("class", "container3");
-    const append = document.getElementById("olList");
-
+    const list = document.getElementById("list");
     const html = path
       .map((nasa) => `<li>${nasa.href}</li>`)
       .join("");
-    append.innerHTML = html;
+    list.innerHTML = html;
     console.log(path);
   };
-
+inputElement.value = "";
   const renderImage = async () => {};
 });

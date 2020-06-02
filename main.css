@@ -22,13 +22,10 @@ header {
     margin: auto;
 }
 
-img {
+.logo {
     float: left;
 }
 
-img:hover {
-    
-}
 
 h2 {
     justify-content: center;
@@ -36,15 +33,11 @@ h2 {
     padding: 25px;
 }
 
-.container1 {
-    background-color: ;
+.container {
     text-align: center;
 
 }
-.container1>img{
- height: 100%;
- width: auto;
-}
+
 .card {
     transition: 0.3s;
     border: 1px solid white;
@@ -72,7 +65,7 @@ h2 {
     float: left;
 }
 
-.container2 {
+.search-container {
     margin-top: 20px;
     width: 100%;
     border: 5px solid red;
@@ -85,17 +78,19 @@ input {
     text-align: center;
     margin: auto;
     display: block;
-    color: black    ;
+    color: black;
 }
-ol{
-    background-color:whitesmoke;
-   display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+ol {
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
+
 li {
     list-style: none;
     margin: 10px;
     padding: 5px;
     color: black;
-    border:2px solid blue;
+    border: 2px solid blue;
 }
